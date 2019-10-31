@@ -3,6 +3,7 @@ import Head from 'next/head'
 import clsx from 'clsx'
 import '../node_modules/tachyons/css/tachyons.css'
 import { Nav } from './Nav'
+import { Footer } from './Footer'
 
 export interface RootProps extends React.HTMLAttributes<HTMLDivElement> {
   description?: string
@@ -26,5 +27,6 @@ export const Root: React.FC<RootProps> = ({
       <Nav />
     </header>
     <main>{children}</main>
+    <Footer />
   </div>
 )
