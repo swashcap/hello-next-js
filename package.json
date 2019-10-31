@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "format": "prettier --write '*.js' '{components,pages}/**/*.{ts,tsx}'",
     "start": "next start"
   },
   "dependencies": {
@@ -15,9 +16,14 @@
     "tachyons": "^4.11.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
     "@types/node": "^12.12.3",
     "@types/react": "^16.9.11",
     "@zeit/next-css": "^1.0.1",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2",
     "typescript": "^3.6.4"
   }
 }

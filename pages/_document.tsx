@@ -6,7 +6,7 @@ import Document, { Head, Html, Main, NextScript } from 'next/document'
 export default class AppDocument extends Document {
   render() {
     return (
-      <Html className="sans-serif" lang='en-US'>
+      <Html className="sans-serif" lang="en-US">
         <Head />
         <body className="center ma0 mw8 ph3">
           <Main />
