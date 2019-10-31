@@ -8,13 +8,16 @@
     "start": "next start"
   },
   "dependencies": {
+    "clsx": "^1.0.4",
     "next": "9.1.2",
     "react": "16.11.0",
-    "react-dom": "16.11.0"
+    "react-dom": "16.11.0",
+    "tachyons": "^4.11.1"
   },
   "devDependencies": {
     "@types/node": "^12.12.3",
     "@types/react": "^16.9.11",
+    "@zeit/next-css": "^1.0.1",
     "typescript": "^3.6.4"
   }
 }
