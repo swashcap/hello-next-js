@@ -11,15 +11,15 @@
   "dependencies": {
     "clsx": "^1.0.4",
     "next": "9.1.2",
-    "react": "16.11.0",
-    "react-dom": "16.11.0",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
     "tachyons": "^4.11.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
     "@types/node": "^13.9.1",
-    "@types/react": "^16.9.11",
+    "@types/react": "^16.9.23",
     "@zeit/next-css": "^1.0.1",
     "husky": "^3.0.9",
     "lint-staged": "^9.4.2",
