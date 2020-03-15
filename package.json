@@ -18,7 +18,7 @@
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
-    "@types/node": "^12.12.3",
+    "@types/node": "^13.9.1",
     "@types/react": "^16.9.11",
     "@zeit/next-css": "^1.0.1",
     "husky": "^3.0.9",
