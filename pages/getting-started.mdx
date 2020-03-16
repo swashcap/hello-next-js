@@ -1,0 +1,44 @@
+# Getting Started
+
+## Install
+
+Make sure you've set up a project with [Node.js](https://nodejs.org/en/) and a `package.json` file. Then, install `hello-next-js` with your favorite package manager.
+
+With [npm](https://www.npmjs.com):
+
+```shell
+npm install --save hello-next-js
+```
+
+With [yarn](https://yarnpkg.com):
+
+```shell
+yarn add hello-next-js
+```
+
+## Use
+
+Add the `hello-next-js` components to your application:
+
+```typescript
+import React from 'react';
+import {Alert, Button} from 'hello-next-js';
+
+export const MyComponent = () => {
+  const [showAlert, setShowAlert] = React.useState(false);
+
+  return (
+    {/* The <Alert /> will render when showAlert is true */}
+    {showAlert && <Alert variant="success">It's an alert!</Alert>}
+
+    {/* The <Button /> toggles showAlert */}
+    <Button
+      onClick={() => {
+        setShowAlert(!showAlert);
+      }}
+    >
+      Toggle alert
+    </Button>
+  );
+};
+```

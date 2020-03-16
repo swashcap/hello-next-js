@@ -1,0 +1,29 @@
+# Hello, Next.js!
+
+This tests [Next.js](https://nextjs.org/docs/basic-features/typescript#custom-app) with [prism-react-renderer](https://www.npmjs.com/package/prism-react-renderer). Here's a sample code block:
+
+```typescript
+import React from 'react';
+
+export interface Props extends React.HTMLAttributes<HTMLDivElement> {
+  /**
+   * Whether the component is a sample.
+   *
+   * @default false
+   */
+  isSample?: boolean
+}
+
+export const SampleCompnent: React.FC<Props> = (props) => {
+  const {
+    isSample,
+    ...rest
+  } = props;
+
+  return (
+    <div {...rest}>
+      {isSample ? 'It\'s a sample' : 'No sample here'}
+    </div>
+  );
+};
+```

@@ -1,4 +1,11 @@
-// https://github.com/zeit/next-plugins/tree/master/packages/next-css
-const withCSS = require('@zeit/next-css')
+/**
+ * Add mdx support
+ * {@link https://github.com/zeit/next.js/tree/canary/packages/next-mdx}
+ */
+const withMDX = require('@next/mdx')({
+  extension: /\.(md|mdx)$/
+})
 
-module.exports = withCSS()
+module.exports = withMDX({
+  pageExtensions: ['ts', 'tsx', 'md', 'mdx', 'js', 'jsx']
+})
