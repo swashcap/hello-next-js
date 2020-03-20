@@ -9,7 +9,18 @@ const withMDX = require('@next/mdx')({
 })
 
 module.exports = withMDX({
+  /**
+   * Custom asset prefix for deploying to GitHub pages.
+   *
+   * {@link https://nextjs.org/docs/api-reference/next.config.js/cdn-support-with-asset-prefix}
+   */
+  assetPrefix:
+    process.env.NODE_ENV === 'production'
+      ? 'http://swashcap.github.io/hello-next-js/'
+      : '',
+
   pageExtensions: ['ts', 'tsx', 'md', 'mdx', 'js', 'jsx'],
+
   /**
    * {@link https://nextjs.org/docs/api-reference/next.config.js/custom-webpack-config}
    */

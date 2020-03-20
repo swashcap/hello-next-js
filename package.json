@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build && next export -o docs",
+    "build": "NODE_ENV=production next build && NODE_ENV=production next export -o docs",
     "clean": "rm -rf docs out",
     "dev": "next dev",
     "format": "prettier --write '*.js' '{components,pages}/**/*.{ts,tsx}'",
