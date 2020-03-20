@@ -17,7 +17,10 @@ export const Footer: React.FC<FooterProps> = ({
       <small className="f6 dib">Hello, Next.js!</small>
       <small className="f6 dib">
         Source code{' '}
-        <a className="color-inherit dim" href="#">
+        <a
+          className="color-inherit dim"
+          href="https://github.com/swashcap/hello-next-js"
+        >
           on GitHub
         </a>
       </small>
