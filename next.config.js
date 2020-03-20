@@ -16,7 +16,7 @@ module.exports = withMDX({
    */
   assetPrefix:
     process.env.NODE_ENV === 'production'
-      ? 'http://swashcap.github.io/hello-next-js/'
+      ? 'https://swashcap.github.io/hello-next-js/'
       : '',
 
   pageExtensions: ['ts', 'tsx', 'md', 'mdx', 'js', 'jsx'],
