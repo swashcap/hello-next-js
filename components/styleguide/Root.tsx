@@ -59,7 +59,11 @@ export const Root: React.FC<RootProps> = ({
             />
           </Grid.Column>
           <Grid.Column className="w-100 w-30-l">
-            <SearchForm />
+            <SearchForm
+              onSubmit={event => {
+                event.preventDefault()
+              }}
+            />
           </Grid.Column>
         </Grid>
       </header>
