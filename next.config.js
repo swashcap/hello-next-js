@@ -20,26 +20,18 @@ module.exports = withMDX({
   assetPrefix,
 
   /**
+   * {@link https://nextjs.org/docs/api-reference/next.config.js/environment-variables}
+   */
+  env: {
+    assetPrefix
+  },
+
+  /**
    * @{link https://nextjs.org/docs/api-reference/next.config.js/exportPathMap#adding-a-trailing-slash}
    */
   exportTrailingSlash: true,
 
-  /**
-   * {@link https://nextjs.org/docs/api-reference/next.config.js/exportPathMap}
-   */
-  // exportPathMap: async (defaultPathMap) => {
-  // debugger;
-  // return defaultPathMap;
-  // },
-
   pageExtensions: ['ts', 'tsx', 'md', 'mdx', 'js', 'jsx'],
-
-  /**
-   * {@link https://nextjs.org/docs/api-reference/next.config.js/runtime-configuration}
-   */
-  publicRuntimeConfig: {
-    assetPrefix
-  },
 
   /**
    * {@link https://nextjs.org/docs/api-reference/next.config.js/custom-webpack-config}

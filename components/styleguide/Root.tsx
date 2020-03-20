@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import React from 'react'
 import clsx from 'clsx'
-import getConfig from 'next/config'
 import { useRouter } from 'next/router'
 
 import { Divider } from './Divider'
@@ -14,11 +13,8 @@ import { SidebarLayout } from './layouts/SidebarLayout'
 import { VisuallyHidden } from '../library/VisuallyHidden'
 import { Grid } from './Grid'
 
-const config = getConfig()
-const assetPrefix = (config?.publicRuntimeConfig?.assetPrefix ?? '').replace(
-  /.*\/$/,
-  ''
-)
+const assetPrefix = (process.env.assetPrefix || '').replace(/\/$/, '')
+debugger
 
 export interface RootProps extends React.HTMLAttributes<HTMLDivElement> {
   description?: string
