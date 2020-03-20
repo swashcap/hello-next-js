@@ -1,0 +1,20 @@
+/**
+ * VisuallyHidden.
+ */
+
+.VisuallyHidden {
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.VisuallyHidden--focusable:active,
+.VisuallyHidden--focusable:focus {
+  height: auto;
+  overflow: visible;
+  position: static;
+  width: auto;
+}

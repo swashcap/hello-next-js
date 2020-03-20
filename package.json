@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "build": "next build && next export -o docs",
+    "clean": "rm -rf docs out",
     "dev": "next dev",
-    "build": "next build && next export",
     "format": "prettier --write '*.js' '{components,pages}/**/*.{ts,tsx}'",
     "start": "next start"
   },
@@ -12,11 +13,13 @@
     "@mdx-js/mdx": "^1.5.7",
     "@mdx-js/react": "^1.5.7",
     "clsx": "^1.1.0",
+    "lodash": "^4.17.15",
     "next": "^9.3.0",
     "prism-react-renderer": "^1.0.2",
     "react": "^16.13.0",
     "react-docgen-typescript": "^1.16.3",
     "react-dom": "^16.13.0",
+    "react-live": "^2.2.2",
     "tachyons": "^4.11.1"
   },
   "devDependencies": {
@@ -29,6 +32,7 @@
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8",
     "prettier": "^1.19.1",
+    "react-docgen-typescript-loader": "^3.7.1",
     "typescript": "^3.8.3"
   }
 }

@@ -1,0 +1,69 @@
+import {Card} from '../../components/library/Card'
+import {CodeBlock} from '../../components/styleguide/CodeBlock'
+import {Grid} from '../../components/styleguide/Grid'
+import {MethodsTable} from '../../components/styleguide/component/MethodsTable'
+import {PropsTable} from '../../components/styleguide/component/PropsTable'
+import {TableOfContents} from '../../components/styleguide/component/TableOfContents'
+
+# Card
+
+<Grid>
+  <Grid.Column className="w-100 w-75-l">
+    <p className="f4">Isolate or draw focus to content with the Card.</p>
+    <p>Card is a generic container for text and image content with elevation to separate and draw attention to itself. Group related elements within the Card.</p>
+  </Grid.Column>
+  <Grid.Column className="w-100 w-25-l">
+    <TableOfContents
+      items={[
+        ['Usage', ['Elevation']],
+        ['Accessibility'],
+        ['Component API', ['Props', 'Methods']]
+      ]}
+    />
+  </Grid.Column>
+</Grid>
+
+#### Related
+
+* [Content and layout design guidelines ↗](#)
+
+## Usage
+
+Import the `Card` component into a React component in your project
+
+```typescript
+import {Card} from 'hello-next-js'
+```
+
+<CodeBlock language="tsx" live scope={{Card}}>
+  {`<Card>
+  <h1 className="f3 lh-title mb1 mt0">Sample card</h1>
+  <p className="mv0">This is a sample card.</p>
+</Card>`}
+</CodeBlock>
+
+
+### Elevation
+
+The `Card`'s elevation can be modifed with the `elevation` property:
+
+<CodeBlock language="tsx" live scope={{Card}}>
+  {`<Card elevation="2">
+  <h1 className="f3 lh-title mb1 mt0">Sample card</h1>
+  <p className="mv0">This is a sample card.</p>
+</Card>`}
+</CodeBlock>
+
+## Accessibility
+
+`Card` is a simple container, and has no accessibility concerns.
+
+## Component API
+
+### Props
+
+<PropsTable component={Card} />
+
+### Methods
+
+<MethodsTable component={Card} />

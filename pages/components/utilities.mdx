@@ -1,0 +1,36 @@
+import {CodeBlock} from '../../components/styleguide/CodeBlock'
+import {Grid} from '../../components/styleguide/Grid'
+import {TableOfContents} from '../../components/styleguide/component/TableOfContents'
+import {VisuallyHidden} from '../../components/library/VisuallyHidden'
+
+# Utilities
+
+<Grid>
+  <Grid.Column className="w-100 w-75-l">
+    <p className="f4">hello-next-js comes with helper components to assist with accessibility and layout.</p>
+  </Grid.Column>
+  <Grid.Column className="w-100 w-25-l">
+    <TableOfContents
+      items={[
+        ['Visually hidden']
+      ]}
+    />
+  </Grid.Column>
+</Grid>
+
+
+## Visually hidden
+
+The `VisuallyHidden` utility makes its contents available to screen readers while hiding it visually.
+
+```tsx
+import {VisuallyHidden} from 'hello-next-js'
+```
+
+Add the `focusable` property to the component visible while focused:
+
+<CodeBlock language="tsx" live scope={{VisuallyHidden}}>
+  {`<VisuallyHidden as="a" href="#content" focusable>
+  Navigate to content
+</VisuallyHidden>`}
+</CodeBlock>

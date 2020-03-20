@@ -1,5 +1,6 @@
 import React from 'react'
 import NextLink, { LinkProps as NextLinkProps } from 'next/link'
+import { useRouter } from 'next/router'
 import clsx from 'clsx'
 
 export interface LinkProps
@@ -14,10 +15,12 @@ export const Link: React.FC<LinkProps> = ({
   underline,
   ...rest
 }) => {
+  const { pathname } = useRouter()
   const props = {
     className: clsx(
       'black dim',
       underline ? 'underline' : 'no-underline',
+      href === pathname && 'dark-red',
       className
     ),
     ...rest

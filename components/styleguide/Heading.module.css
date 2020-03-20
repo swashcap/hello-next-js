@@ -1,0 +1,18 @@
+.Heading:hover .HeadingAnchor {
+  display: initial;
+}
+
+.HeadingAnchor {
+  bottom: .25rem;
+  display: none;
+  left: -2rem;
+  width: 2rem;
+}
+
+h3 .HeadingAnchor {
+  bottom: 0
+}
+
+h4 .HeadingAnchor {
+  bottom: -.25rem;
+}

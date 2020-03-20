@@ -7,7 +7,12 @@ export default class AppDocument extends Document {
   render() {
     return (
       <Html className="lh-copy sans-serif" lang="en-US">
-        <Head />
+        <Head>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap"
+            rel="stylesheet"
+          ></link>
+        </Head>
         <body className="center ma0 mw8 ph3">
           <Main />
           <NextScript />

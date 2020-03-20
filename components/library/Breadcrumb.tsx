@@ -39,7 +39,7 @@ export class Breadcrumb extends React.Component<BreadcrumbProps> {
           <>
             <a
               className={clsx(
-                'color-inherit dim no-underline pv1 pointer',
+                'color-inherit dib dim no-underline pv1 pointer',
                 inputClassName
               )}
               {...inputRest}

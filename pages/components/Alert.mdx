@@ -1,0 +1,120 @@
+import {Alert} from '../../components/library/Alert'
+import {CodeBlock} from '../../components/styleguide/CodeBlock'
+import {Grid} from '../../components/styleguide/Grid'
+import {MethodsTable} from '../../components/styleguide/component/MethodsTable'
+import {PropsTable} from '../../components/styleguide/component/PropsTable'
+import {TableOfContents} from '../../components/styleguide/component/TableOfContents'
+
+# Alert
+
+<Grid>
+  <Grid.Column className="w-100 w-75-l">
+    <p className="f4">The Alert component informs users of change in the underlying system; user interaction or a change in application state can surface the component.</p>
+    <p>Alert has three variations ensure it covers multiple interaction patterns: success, warning, and error.</p>
+  </Grid.Column>
+  <Grid.Column className="w-100 w-25-l">
+    <TableOfContents
+      items={[
+        ['Usage', ['Variants', 'Closeable']],
+        ['Accessibility'],
+        ['Component API', ['Props', 'Methods']]
+      ]}
+    />
+  </Grid.Column>
+</Grid>
+
+#### Related
+
+* [Interaction design guidelines ↗](#)
+* [Alert design specifications ↗](#)
+
+## Usage
+
+Import the `Alert` component into a React component in your project:
+
+```typescript
+import {Alert} from 'hello-next-js'
+```
+
+Use `Alert` by passing children:
+
+```tsx
+import React from 'react'
+import {Alert} from 'hello-next-js'
+
+export const MyComponent: React.FC<any> = () => {
+  return (
+    <div>
+      <p>Uh-oh<p>
+      <Alert>
+        <strong>Warning:</strong>
+        This is a cautionary alert.
+      </Alert>
+    </div>
+  )
+}
+```
+
+### Variants
+
+`Alert` comes with three variations, which are set via the `variant` property.
+
+#### Success
+
+Use to signify a positive or successful interaction.
+
+<CodeBlock language="tsx" live scope={{Alert}}>
+  {`<Alert variant="success">
+  <strong>Success!</strong> This is a positive alert.
+</Alert>`}
+</CodeBlock>
+
+#### Warning
+
+Use to indicate bring awareness of a non-critical, potentially negative information. This is the default `Alert`.
+
+<CodeBlock language="tsx" live scope={{Alert}}>
+  {`<Alert variant="warning">
+  <strong>Warning:</strong> This is a cautionary alert.
+</Alert>`}
+</CodeBlock>
+
+#### Error
+
+Use to convey a negative or errorful interaction or state.
+
+<CodeBlock language="tsx" live scope={{Alert}}>
+  {`<Alert variant="error">
+  <strong>Error!</strong> This is a negative alert.
+</Alert>`}
+</CodeBlock>
+
+### Closeable
+
+Pass an `onClose` property to the `Alert` to display a close button:
+
+<CodeBlock language="tsx" live scope={{Alert}}>
+  {`<Alert onClose={console.log} variant="success">
+  This alert is closeable.
+</Alert>`}
+</CodeBlock>
+
+The `Alert` component has a `focusButton` method that will call [`HTMLElement.focus()`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLOrForeignElement/focus) on the `button`.
+
+## Accessibility
+
+The `Alert` component has a `role="alert"` property, which covers the WCAG requirement.
+
+#### Related
+
+* ["Using the alert role" on MDN ↗](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role)
+
+## Component API
+
+### Props
+
+<PropsTable component={Alert} />
+
+### Methods
+
+<MethodsTable component={Alert} />
