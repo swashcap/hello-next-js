@@ -1,6 +1,7 @@
-import React from 'react'
 import Head from 'next/head'
+import React from 'react'
 import clsx from 'clsx'
+import getConfig from 'next/config'
 import { useRouter } from 'next/router'
 
 import { Divider } from './Divider'
@@ -12,6 +13,12 @@ import { SearchForm } from './SearchForm'
 import { SidebarLayout } from './layouts/SidebarLayout'
 import { VisuallyHidden } from '../library/VisuallyHidden'
 import { Grid } from './Grid'
+
+const config = getConfig()
+const assetPrefix = (config?.publicRuntimeConfig?.assetPrefix ?? '').replace(
+  /.*\/$/,
+  ''
+)
 
 export interface RootProps extends React.HTMLAttributes<HTMLDivElement> {
   description?: string
@@ -37,7 +44,7 @@ export const Root: React.FC<RootProps> = ({
         Skip to content
       </VisuallyHidden>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href={`${assetPrefix}/favicon.ico`} />
         <title>{title}</title>
         {!!description && <meta name="description" content={description} />}
       </Head>
@@ -52,7 +59,7 @@ export const Root: React.FC<RootProps> = ({
               inline
               links={[
                 {
-                  href: '/components/',
+                  href: `${assetPrefix}/components/`,
                   name: 'Components'
                 }
               ]}
@@ -76,7 +83,7 @@ export const Root: React.FC<RootProps> = ({
                   className="mb2 mt3"
                   links={[
                     {
-                      href: '/components/',
+                      href: `${assetPrefix}/components/`,
                       name: 'Getting Started'
                     }
                   ]}
@@ -86,19 +93,19 @@ export const Root: React.FC<RootProps> = ({
                   className="mv2"
                   links={[
                     {
-                      href: '/components/Alert/',
+                      href: `${assetPrefix}/components/Alert/`,
                       name: 'Alert'
                     },
                     {
-                      href: '/components/Breadcrumb/',
+                      href: `${assetPrefix}/components/Breadcrumb/`,
                       name: 'Breadcrumb'
                     },
                     {
-                      href: '/components/Button/',
+                      href: `${assetPrefix}/components/Button/`,
                       name: 'Button'
                     },
                     {
-                      href: '/components/Card/',
+                      href: `${assetPrefix}/components/Card/`,
                       name: 'Card'
                     }
                   ]}
@@ -108,7 +115,7 @@ export const Root: React.FC<RootProps> = ({
                   className="mv2"
                   links={[
                     {
-                      href: '/components/utilities/',
+                      href: `${assetPrefix}/components/utilities/`,
                       name: 'Utilities'
                     }
                   ]}

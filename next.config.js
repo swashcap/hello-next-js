@@ -1,5 +1,8 @@
 const path = require('path')
 
+const assetPrefix =
+  process.env.NODE_ENV === 'production' ? '/hello-next-js/' : ''
+
 /**
  * Add mdx support
  * {@link https://github.com/zeit/next.js/tree/canary/packages/next-mdx}
@@ -14,9 +17,16 @@ module.exports = withMDX({
    *
    * {@link https://nextjs.org/docs/api-reference/next.config.js/cdn-support-with-asset-prefix}
    */
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/hello-next-js/' : '',
+  assetPrefix,
 
   pageExtensions: ['ts', 'tsx', 'md', 'mdx', 'js', 'jsx'],
+
+  /**
+   * {@link https://nextjs.org/docs/api-reference/next.config.js/runtime-configuration}
+   */
+  publicRuntimeConfig: {
+    assetPrefix
+  },
 
   /**
    * {@link https://nextjs.org/docs/api-reference/next.config.js/custom-webpack-config}
