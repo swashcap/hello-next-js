@@ -52,7 +52,7 @@ export const Root: React.FC<RootProps> = ({
               inline
               links={[
                 {
-                  href: '/components',
+                  href: '/components/',
                   name: 'Components'
                 }
               ]}
@@ -72,7 +72,7 @@ export const Root: React.FC<RootProps> = ({
                   className="mb2 mt3"
                   links={[
                     {
-                      href: '/components',
+                      href: '/components/',
                       name: 'Getting Started'
                     }
                   ]}
@@ -82,19 +82,19 @@ export const Root: React.FC<RootProps> = ({
                   className="mv2"
                   links={[
                     {
-                      href: '/components/Alert',
+                      href: '/components/Alert/',
                       name: 'Alert'
                     },
                     {
-                      href: '/components/Breadcrumb',
+                      href: '/components/Breadcrumb/',
                       name: 'Breadcrumb'
                     },
                     {
-                      href: '/components/Button',
+                      href: '/components/Button/',
                       name: 'Button'
                     },
                     {
-                      href: '/components/Card',
+                      href: '/components/Card/',
                       name: 'Card'
                     }
                   ]}
@@ -104,7 +104,7 @@ export const Root: React.FC<RootProps> = ({
                   className="mv2"
                   links={[
                     {
-                      href: '/components/utilities',
+                      href: '/components/utilities/',
                       name: 'Utilities'
                     }
                   ]}

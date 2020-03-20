@@ -446,9 +446,19 @@ var statusCodes = {
   405: 'Method Not Allowed',
   500: 'Internal Server Error'
 };
+
+function _getInitialProps(_ref) {
+  var res = _ref.res,
+      err = _ref.err;
+  var statusCode = res && res.statusCode ? res.statusCode : err ? err.statusCode : 404;
+  return {
+    statusCode: statusCode
+  };
+}
 /**
 * `Error` component used for handling errors.
 */
+
 
 var Error = /*#__PURE__*/function (_react$default$Compon) {
   _inherits(Error, _react$default$Compon);
@@ -478,16 +488,6 @@ var Error = /*#__PURE__*/function (_react$default$Compon) {
         style: styles.h2
       }, title, "."))));
     }
-  }], [{
-    key: "getInitialProps",
-    value: function getInitialProps(_ref) {
-      var res = _ref.res,
-          err = _ref.err;
-      var statusCode = res && res.statusCode ? res.statusCode : err ? err.statusCode : 404;
-      return {
-        statusCode: statusCode
-      };
-    }
   }]);
 
   return Error;
@@ -495,6 +495,8 @@ var Error = /*#__PURE__*/function (_react$default$Compon) {
 
 exports["default"] = Error;
 Error.displayName = 'ErrorPage';
+Error.getInitialProps = _getInitialProps;
+Error.origGetInitialProps = _getInitialProps;
 var styles = {
   error: {
     color: '#000',
@@ -805,23 +807,23 @@ module.exports = _typeof;
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_82519ec661270f7f484f ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_2adc2403d89adc16ead0 ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_82519ec661270f7f484f */ "dll-reference dll_82519ec661270f7f484f"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_2adc2403d89adc16ead0 */ "dll-reference dll_2adc2403d89adc16ead0"))("./node_modules/react/index.js");
 
 /***/ }),
 
-/***/ "dll-reference dll_82519ec661270f7f484f":
+/***/ "dll-reference dll_2adc2403d89adc16ead0":
 /*!*******************************************!*\
-  !*** external "dll_82519ec661270f7f484f" ***!
+  !*** external "dll_2adc2403d89adc16ead0" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_82519ec661270f7f484f;
+module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
