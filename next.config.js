@@ -19,6 +19,19 @@ module.exports = withMDX({
    */
   assetPrefix,
 
+  /**
+   * @{link https://nextjs.org/docs/api-reference/next.config.js/exportPathMap#adding-a-trailing-slash}
+   */
+  exportTrailingSlash: true,
+
+  /**
+   * {@link https://nextjs.org/docs/api-reference/next.config.js/exportPathMap}
+   */
+  // exportPathMap: async (defaultPathMap) => {
+  // debugger;
+  // return defaultPathMap;
+  // },
+
   pageExtensions: ['ts', 'tsx', 'md', 'mdx', 'js', 'jsx'],
 
   /**
