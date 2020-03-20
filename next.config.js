@@ -14,10 +14,7 @@ module.exports = withMDX({
    *
    * {@link https://nextjs.org/docs/api-reference/next.config.js/cdn-support-with-asset-prefix}
    */
-  assetPrefix:
-    process.env.NODE_ENV === 'production'
-      ? 'https://swashcap.github.io/hello-next-js/'
-      : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/hello-next-js/' : '',
 
   pageExtensions: ['ts', 'tsx', 'md', 'mdx', 'js', 'jsx'],
 
