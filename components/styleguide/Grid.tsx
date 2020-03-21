@@ -13,6 +13,8 @@ export class Grid extends React.Component<GridProps> {
   render() {
     const { className, ...rest } = this.props
 
-    return <div className={clsx('flex nl3 nr3', className)} {...rest} />
+    return (
+      <div className={clsx('flex flex-wrap nl3 nr3', className)} {...rest} />
+    )
   }
 }

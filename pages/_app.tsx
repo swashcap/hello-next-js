@@ -8,8 +8,9 @@ import '../components/library/Global.css'
 import { Body } from '../components/styleguide/Body'
 import { CodeBlock } from '../components/styleguide/CodeBlock'
 import { Heading } from '../components/styleguide/Heading'
-import { Root } from '../components/styleguide/Root'
 import { Link } from '../components/styleguide/Link'
+import { List } from '../components/styleguide/List'
+import { Root } from '../components/styleguide/Root'
 
 const components = {
   a: props => <Link underline {...props} />,
@@ -17,8 +18,10 @@ const components = {
   h2: props => <Heading variant="2" {...props} />,
   h3: props => <Heading variant="3" {...props} />,
   h4: props => <Heading variant="4" {...props} />,
+  ol: props => <List as="ol" {...props} />,
   p: props => <Body {...props} />,
   pre: props => <div {...props} />,
+  ul: props => <List {...props} />,
   code: ({
     children,
     className,

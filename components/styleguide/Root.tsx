@@ -43,8 +43,11 @@ export const Root: React.FC<RootProps> = ({
         <title>{title}</title>
         {!!description && <meta name="description" content={description} />}
       </Head>
-      <header className="bb b--silver items-center" role="banner">
-        <Grid className="flex-wrap items-center">
+      <header
+        className="bb b--silver pb3 pb0-m pb0-l items-center"
+        role="banner"
+      >
+        <Grid className="items-center">
           <Grid.Column className="w-100 w-70-l">
             <Link className="fw7 pv3" href="/">
               Hello, Next.js!

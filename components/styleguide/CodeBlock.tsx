@@ -54,9 +54,10 @@ export const CodeBlock: React.FC<any> = ({
             <LiveEditor
               style={{
                 fontFamily: 'Consolas, monaco, monospace',
-                fontSize: '16px',
-                lineHeight: '20px',
-                padding: 0
+                fontSize: '14px',
+                lineHeight: 1.25,
+                padding: 0,
+                whiteSpace: 'pre-wrap'
               }}
             />
           </div>
@@ -92,8 +93,11 @@ export const CodeBlock: React.FC<any> = ({
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre
-          className={clsx('code lh-title pa3', className, cls)}
-          style={style}
+          className={clsx('code f6 lh-title pa3', className, cls)}
+          style={{
+            ...style,
+            whiteSpace: 'pre-wrap'
+          }}
         >
           {tokens.map((line, i) => (
             <div {...getLineProps({ line, key: i })}>

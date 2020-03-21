@@ -356,9 +356,10 @@ var CodeBlock = function CodeBlock(_ref) {
     }, __jsx(react_live__WEBPACK_IMPORTED_MODULE_6__["LiveEditor"], {
       style: {
         fontFamily: 'Consolas, monaco, monospace',
-        fontSize: '16px',
-        lineHeight: '20px',
-        padding: 0
+        fontSize: '14px',
+        lineHeight: 1.25,
+        padding: 0,
+        whiteSpace: 'pre-wrap'
       },
       __source: {
         fileName: _jsxFileName,
@@ -372,7 +373,7 @@ var CodeBlock = function CodeBlock(_ref) {
     }, rest, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 68
+        lineNumber: 69
       },
       __self: this
     }), __jsx(react_live__WEBPACK_IMPORTED_MODULE_6__["LiveProvider"], {
@@ -384,21 +385,21 @@ var CodeBlock = function CodeBlock(_ref) {
       theme: _prismTheme__WEBPACK_IMPORTED_MODULE_8__["prismTheme"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 69
+        lineNumber: 70
       },
       __self: this
     }, __jsx(react_live__WEBPACK_IMPORTED_MODULE_6__["LivePreview"], {
       className: "pa3 pa4-ns",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 78
+        lineNumber: 79
       },
       __self: this
     }), __jsx(react_live__WEBPACK_IMPORTED_MODULE_6__["LiveError"], {
       className: "dark-red mv0 nt4 pa3",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 79
+        lineNumber: 80
       },
       __self: this
     })));
@@ -411,7 +412,7 @@ var CodeBlock = function CodeBlock(_ref) {
   }, rest, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 87
     },
     __self: this
   }), function (_ref2) {
@@ -421,11 +422,13 @@ var CodeBlock = function CodeBlock(_ref) {
         getLineProps = _ref2.getLineProps,
         getTokenProps = _ref2.getTokenProps;
     return __jsx("pre", {
-      className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])('code lh-title pa3', className, cls),
-      style: style,
+      className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])('code f6 lh-title pa3', className, cls),
+      style: _objectSpread({}, style, {
+        whiteSpace: 'pre-wrap'
+      }),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 94
+        lineNumber: 95
       },
       __self: this
     }, tokens.map(function (line, i) {
@@ -435,7 +438,7 @@ var CodeBlock = function CodeBlock(_ref) {
       }), {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 99
+          lineNumber: 103
         },
         __self: this
       }), line.map(function (token, key) {
@@ -445,7 +448,7 @@ var CodeBlock = function CodeBlock(_ref) {
         }), {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 101
+            lineNumber: 105
           },
           __self: this
         }));
@@ -590,11 +593,11 @@ var Grid = /*#__PURE__*/function (_React$Component) {
           rest = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["className"]);
 
       return __jsx("div", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-        className: Object(clsx__WEBPACK_IMPORTED_MODULE_8__["default"])('flex nl3 nr3', className)
+        className: Object(clsx__WEBPACK_IMPORTED_MODULE_8__["default"])('flex flex-wrap nl3 nr3', className)
       }, rest, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 16
+          lineNumber: 17
         },
         __self: this
       }));
@@ -689,38 +692,45 @@ var MethodsTable = function MethodsTable(_ref) {
   }
 
   var methods = component.__docgenInfo.methods;
-  return __jsx("table", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-    className: Object(clsx__WEBPACK_IMPORTED_MODULE_3__["default"])('collapse w-100', className)
+  return __jsx("div", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    className: Object(clsx__WEBPACK_IMPORTED_MODULE_3__["default"])('overflow-scroll w-100', className)
   }, rest, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 33
     },
     __self: this
-  }), __jsx("thead", {
-    className: "bg-near-white tl v-top",
+  }), __jsx("table", {
+    className: "collapse w-100",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 34
     },
     __self: this
-  }, __jsx("tr", {
+  }, __jsx("thead", {
+    className: "bg-near-white tl v-top",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 35
+    },
+    __self: this
+  }, __jsx("tr", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
     },
     __self: this
   }, __jsx("th", {
     className: "pa2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 37
     },
     __self: this
   }, "Name"))), __jsx("tbody", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 40
     },
     __self: this
   }, methods.map(function (_ref2) {
@@ -730,24 +740,24 @@ var MethodsTable = function MethodsTable(_ref) {
       key: name,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 42
+        lineNumber: 43
       },
       __self: this
     }, __jsx("td", {
       className: "pa2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 43
+        lineNumber: 44
       },
       __self: this
     }, __jsx(_Code__WEBPACK_IMPORTED_MODULE_4__["Code"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 44
+        lineNumber: 45
       },
       __self: this
     }, name)));
-  })));
+  }))));
 };
 
 try {
@@ -820,22 +830,29 @@ var PropsTable = function PropsTable(_ref) {
     return __jsx(_Empty__WEBPACK_IMPORTED_MODULE_5__["Empty"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 29
+        lineNumber: 28
       },
       __self: this
     }, "No props found");
   }
 
   var props = component.__docgenInfo.props;
-  return __jsx("table", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-    className: Object(clsx__WEBPACK_IMPORTED_MODULE_3__["default"])('collapse w-100', className)
+  return __jsx("div", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    className: Object(clsx__WEBPACK_IMPORTED_MODULE_3__["default"])('overflow-scroll w-100', className)
   }, rest, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    },
+    __self: this
+  }), __jsx("table", {
+    className: "collapse w-100",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 37
     },
     __self: this
-  }), __jsx("thead", {
+  }, __jsx("thead", {
     className: "bg-near-white tl v-top",
     __source: {
       fileName: _jsxFileName,
@@ -901,64 +918,64 @@ var PropsTable = function PropsTable(_ref) {
       key: key,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52
+        lineNumber: 54
       },
       __self: this
     }, __jsx("td", {
       className: "pa2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 53
+        lineNumber: 55
       },
       __self: this
     }, __jsx(_Code__WEBPACK_IMPORTED_MODULE_4__["Code"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 54
+        lineNumber: 56
       },
       __self: this
     }, name)), __jsx("td", {
       className: "pa2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 56
+        lineNumber: 58
       },
       __self: this
     }, __jsx(_Code__WEBPACK_IMPORTED_MODULE_4__["Code"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 57
+        lineNumber: 59
       },
       __self: this
     }, type.name, " ", type.raw)), __jsx("td", {
       className: "pa2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61
+        lineNumber: 63
       },
       __self: this
     }, !!(defaultValue === null || defaultValue === void 0 ? void 0 : defaultValue.value) && __jsx(_Code__WEBPACK_IMPORTED_MODULE_4__["Code"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 62
+        lineNumber: 64
       },
       __self: this
     }, defaultValue.value)), __jsx("td", {
       className: "pa2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 64
+        lineNumber: 66
       },
       __self: this
     }, description), __jsx("td", {
       className: "pa2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 65
+        lineNumber: 67
       },
       __self: this
     }, required ? 'Required' : ''));
-  })));
+  }))));
 };
 
 try {
@@ -52790,7 +52807,7 @@ MDXContent.isMDXComponent = true;
 
 /***/ }),
 
-/***/ 5:
+/***/ 7:
 /*!********************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fcomponents%2FCard&absolutePagePath=%2FUsers%2Fcreed%2Fdev%2Fhello-next-js%2Fpages%2Fcomponents%2FCard.mdx ***!
   \********************************************************************************************************************************************************/
@@ -52813,5 +52830,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js"]]]);
+},[[7,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=Card.js.map

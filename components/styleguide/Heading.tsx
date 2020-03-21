@@ -35,9 +35,9 @@ export const Heading: React.FC<HeadingProps> = ({
       className={clsx(
         style.Heading,
         'lh-title mb3 relative',
-        variant === '1' && 'f1 fw8 mt3',
-        variant === '2' && 'f2 fw5 mt4',
-        variant === '3' && 'f3 fw5 mt4',
+        variant === '1' && 'f2 f1-l fw8 mt3',
+        variant === '2' && 'f3 f2-l fw5 mt4',
+        variant === '3' && 'f4 f3-l fw5 mt4',
         variant === '4' && 'dark-gray f5 fw7 mt4 tracked ttu',
         className
       )}

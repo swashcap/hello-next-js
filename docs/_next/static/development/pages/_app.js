@@ -358,9 +358,10 @@ var CodeBlock = function CodeBlock(_ref) {
     }, __jsx(react_live__WEBPACK_IMPORTED_MODULE_6__["LiveEditor"], {
       style: {
         fontFamily: 'Consolas, monaco, monospace',
-        fontSize: '16px',
-        lineHeight: '20px',
-        padding: 0
+        fontSize: '14px',
+        lineHeight: 1.25,
+        padding: 0,
+        whiteSpace: 'pre-wrap'
       },
       __source: {
         fileName: _jsxFileName,
@@ -374,7 +375,7 @@ var CodeBlock = function CodeBlock(_ref) {
     }, rest, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 68
+        lineNumber: 69
       },
       __self: this
     }), __jsx(react_live__WEBPACK_IMPORTED_MODULE_6__["LiveProvider"], {
@@ -386,21 +387,21 @@ var CodeBlock = function CodeBlock(_ref) {
       theme: _prismTheme__WEBPACK_IMPORTED_MODULE_8__["prismTheme"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 69
+        lineNumber: 70
       },
       __self: this
     }, __jsx(react_live__WEBPACK_IMPORTED_MODULE_6__["LivePreview"], {
       className: "pa3 pa4-ns",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 78
+        lineNumber: 79
       },
       __self: this
     }), __jsx(react_live__WEBPACK_IMPORTED_MODULE_6__["LiveError"], {
       className: "dark-red mv0 nt4 pa3",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 79
+        lineNumber: 80
       },
       __self: this
     })));
@@ -413,7 +414,7 @@ var CodeBlock = function CodeBlock(_ref) {
   }, rest, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 87
     },
     __self: this
   }), function (_ref2) {
@@ -423,11 +424,13 @@ var CodeBlock = function CodeBlock(_ref) {
         getLineProps = _ref2.getLineProps,
         getTokenProps = _ref2.getTokenProps;
     return __jsx("pre", {
-      className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])('code lh-title pa3', className, cls),
-      style: style,
+      className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])('code f6 lh-title pa3', className, cls),
+      style: _objectSpread({}, style, {
+        whiteSpace: 'pre-wrap'
+      }),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 94
+        lineNumber: 95
       },
       __self: this
     }, tokens.map(function (line, i) {
@@ -437,7 +440,7 @@ var CodeBlock = function CodeBlock(_ref) {
       }), {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 99
+          lineNumber: 103
         },
         __self: this
       }), line.map(function (token, key) {
@@ -447,7 +450,7 @@ var CodeBlock = function CodeBlock(_ref) {
         }), {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 101
+            lineNumber: 105
           },
           __self: this
         }));
@@ -667,11 +670,11 @@ var Grid = /*#__PURE__*/function (_React$Component) {
           rest = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["className"]);
 
       return __jsx("div", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-        className: Object(clsx__WEBPACK_IMPORTED_MODULE_8__["default"])('flex nl3 nr3', className)
+        className: Object(clsx__WEBPACK_IMPORTED_MODULE_8__["default"])('flex flex-wrap nl3 nr3', className)
       }, rest, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 16
+          lineNumber: 17
         },
         __self: this
       }));
@@ -827,7 +830,7 @@ var Heading = function Heading(_ref) {
   }
 
   return __jsx(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-    className: Object(clsx__WEBPACK_IMPORTED_MODULE_3__["default"])(_Heading_module_css__WEBPACK_IMPORTED_MODULE_5___default.a.Heading, 'lh-title mb3 relative', variant === '1' && 'f1 fw8 mt3', variant === '2' && 'f2 fw5 mt4', variant === '3' && 'f3 fw5 mt4', variant === '4' && 'dark-gray f5 fw7 mt4 tracked ttu', className),
+    className: Object(clsx__WEBPACK_IMPORTED_MODULE_3__["default"])(_Heading_module_css__WEBPACK_IMPORTED_MODULE_5___default.a.Heading, 'lh-title mb3 relative', variant === '1' && 'f2 f1-l fw8 mt3', variant === '2' && 'f3 f2-l fw5 mt4', variant === '3' && 'f4 f3-l fw5 mt4', variant === '4' && 'dark-gray f5 fw7 mt4 tracked ttu', className),
     id: id
   }, rest, {
     __source: {
@@ -1030,6 +1033,74 @@ try {
       docgenInfo: Link.__docgenInfo,
       name: "Link",
       path: "components/styleguide/Link.tsx#Link"
+    };
+} catch (__react_docgen_typescript_loader_error) {}
+
+/***/ }),
+
+/***/ "./components/styleguide/List.tsx":
+/*!****************************************!*\
+  !*** ./components/styleguide/List.tsx ***!
+  \****************************************/
+/*! exports provided: List */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "List", function() { return List; });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
+
+
+var _jsxFileName = "/Users/creed/dev/hello-next-js/components/styleguide/List.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
+
+
+var List = function List(_ref) {
+  var asProp = _ref.as,
+      className = _ref.className,
+      rest = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, ["as", "className"]);
+
+  var Component = asProp || 'ul';
+  return __jsx(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    className: Object(clsx__WEBPACK_IMPORTED_MODULE_3__["default"])('mv3 pl3', className)
+  }, rest, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }));
+};
+
+try {
+  // @ts-ignore
+  List.displayName = "List"; // @ts-ignore
+
+  List.__docgenInfo = {
+    "description": "",
+    "displayName": "List",
+    "props": {
+      "as": {
+        "defaultValue": null,
+        "description": "",
+        "name": "as",
+        "required": false,
+        "type": {
+          "name": "T"
+        }
+      }
+    }
+  }; // @ts-ignore
+
+  if (typeof STORYBOOK_REACT_CLASSES !== "undefined") // @ts-ignore
+    STORYBOOK_REACT_CLASSES["components/styleguide/List.tsx#List"] = {
+      docgenInfo: List.__docgenInfo,
+      name: "List",
+      path: "components/styleguide/List.tsx#List"
     };
 } catch (__react_docgen_typescript_loader_error) {}
 
@@ -1242,7 +1313,7 @@ var Root = function Root(_ref) {
     },
     __self: this
   })), __jsx("header", {
-    className: "bb b--silver items-center",
+    className: "bb b--silver pb3 pb0-m pb0-l items-center",
     role: "banner",
     __source: {
       fileName: _jsxFileName,
@@ -1250,17 +1321,17 @@ var Root = function Root(_ref) {
     },
     __self: this
   }, __jsx(_Grid__WEBPACK_IMPORTED_MODULE_14__["Grid"], {
-    className: "flex-wrap items-center",
+    className: "items-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 50
     },
     __self: this
   }, __jsx(_Grid__WEBPACK_IMPORTED_MODULE_14__["Grid"].Column, {
     className: "w-100 w-70-l",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 51
     },
     __self: this
   }, __jsx(_Link__WEBPACK_IMPORTED_MODULE_9__["Link"], {
@@ -1268,7 +1339,7 @@ var Root = function Root(_ref) {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 52
     },
     __self: this
   }, "Hello, Next.js!"), __jsx(_Nav__WEBPACK_IMPORTED_MODULE_10__["Nav"], {
@@ -1280,14 +1351,14 @@ var Root = function Root(_ref) {
     }],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 55
     },
     __self: this
   })), __jsx(_Grid__WEBPACK_IMPORTED_MODULE_14__["Grid"].Column, {
     className: "w-100 w-30-l",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 66
     },
     __self: this
   }, __jsx(_SearchForm__WEBPACK_IMPORTED_MODULE_11__["SearchForm"], {
@@ -1296,7 +1367,7 @@ var Root = function Root(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 67
     },
     __self: this
   })))), __jsx("main", {
@@ -1305,7 +1376,7 @@ var Root = function Root(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 75
     },
     __self: this
   }, pathname.includes('components') ? __jsx(_layouts_SidebarLayout__WEBPACK_IMPORTED_MODULE_12__["SidebarLayout"], {
@@ -1317,14 +1388,14 @@ var Root = function Root(_ref) {
       }],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 77
+        lineNumber: 80
       },
       __self: this
     }), __jsx(_Divider__WEBPACK_IMPORTED_MODULE_6__["Divider"], {
       className: "mv2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 86
+        lineNumber: 89
       },
       __self: this
     }), __jsx(_Nav__WEBPACK_IMPORTED_MODULE_10__["Nav"], {
@@ -1344,14 +1415,14 @@ var Root = function Root(_ref) {
       }],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 87
+        lineNumber: 90
       },
       __self: this
     }), __jsx(_Divider__WEBPACK_IMPORTED_MODULE_6__["Divider"], {
       className: "mv2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 108
+        lineNumber: 111
       },
       __self: this
     }), __jsx(_Nav__WEBPACK_IMPORTED_MODULE_10__["Nav"], {
@@ -1362,13 +1433,13 @@ var Root = function Root(_ref) {
       }],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 109
+        lineNumber: 112
       },
       __self: this
     })),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 77
     },
     __self: this
   }, __jsx("article", {
@@ -1376,20 +1447,20 @@ var Root = function Root(_ref) {
     id: "content",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
+      lineNumber: 124
     },
     __self: this
   }, children)) : __jsx(_layouts_FullPageLayout__WEBPACK_IMPORTED_MODULE_8__["FullPageLayout"], {
     id: "content",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 126
+      lineNumber: 129
     },
     __self: this
   }, children)), __jsx(_Footer__WEBPACK_IMPORTED_MODULE_7__["Footer"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 129
+      lineNumber: 132
     },
     __self: this
   }));
@@ -1520,34 +1591,32 @@ try {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FullPageLayout", function() { return FullPageLayout; });
-/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _Grid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Grid */ "./components/styleguide/Grid.tsx");
 
-var _jsxFileName = "/Users/creed/dev/hello-next-js/components/styleguide/layouts/FullPageLayout.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
+var _jsxFileName = "/Users/creed/dev/hello-next-js/components/styleguide/layouts/FullPageLayout.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
 var FullPageLayout = function FullPageLayout(_ref) {
   var children = _ref.children,
-      className = _ref.className,
-      rest = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__["default"])(_ref, ["children", "className"]);
+      rest = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, ["children"]);
 
-  return __jsx(_Grid__WEBPACK_IMPORTED_MODULE_3__["Grid"], {
-    className: Object(clsx__WEBPACK_IMPORTED_MODULE_2__["default"])('flex-wrap', className),
+  return __jsx(_Grid__WEBPACK_IMPORTED_MODULE_3__["Grid"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, rest, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 11
     },
     __self: this
-  }, __jsx(_Grid__WEBPACK_IMPORTED_MODULE_3__["Grid"].Column, {
+  }), __jsx(_Grid__WEBPACK_IMPORTED_MODULE_3__["Grid"].Column, {
     className: "w-100 w-80-m w-80-l",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 12
     },
     __self: this
   }, children));
@@ -1587,41 +1656,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
-/* harmony import */ var _Grid__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Grid */ "./components/styleguide/Grid.tsx");
+/* harmony import */ var _Grid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Grid */ "./components/styleguide/Grid.tsx");
 
 
 var _jsxFileName = "/Users/creed/dev/hello-next-js/components/styleguide/layouts/SidebarLayout.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
-
 var SidebarLayout = function SidebarLayout(_ref) {
   var children = _ref.children,
-      className = _ref.className,
       sidebar = _ref.sidebar,
-      rest = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, ["children", "className", "sidebar"]);
+      rest = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, ["children", "sidebar"]);
 
-  return __jsx(_Grid__WEBPACK_IMPORTED_MODULE_4__["Grid"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-    className: Object(clsx__WEBPACK_IMPORTED_MODULE_3__["default"])('flex-wrap', className)
-  }, rest, {
+  return __jsx(_Grid__WEBPACK_IMPORTED_MODULE_3__["Grid"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, rest, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 14
     },
     __self: this
-  }), __jsx(_Grid__WEBPACK_IMPORTED_MODULE_4__["Grid"].Column, {
+  }), __jsx(_Grid__WEBPACK_IMPORTED_MODULE_3__["Grid"].Column, {
     className: "w-100 w-20-m w-20-l",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 15
     },
     __self: this
-  }, sidebar), __jsx(_Grid__WEBPACK_IMPORTED_MODULE_4__["Grid"].Column, {
+  }, sidebar), __jsx(_Grid__WEBPACK_IMPORTED_MODULE_3__["Grid"].Column, {
     className: "w-100 w-80-m w-80-l",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 16
     },
     __self: this
   }, children));
@@ -57156,8 +57220,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_styleguide_Body__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/styleguide/Body */ "./components/styleguide/Body.tsx");
 /* harmony import */ var _components_styleguide_CodeBlock__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/styleguide/CodeBlock */ "./components/styleguide/CodeBlock.tsx");
 /* harmony import */ var _components_styleguide_Heading__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/styleguide/Heading */ "./components/styleguide/Heading.tsx");
-/* harmony import */ var _components_styleguide_Root__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/styleguide/Root */ "./components/styleguide/Root.tsx");
-/* harmony import */ var _components_styleguide_Link__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/styleguide/Link */ "./components/styleguide/Link.tsx");
+/* harmony import */ var _components_styleguide_Link__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/styleguide/Link */ "./components/styleguide/Link.tsx");
+/* harmony import */ var _components_styleguide_List__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/styleguide/List */ "./components/styleguide/List.tsx");
+/* harmony import */ var _components_styleguide_Root__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/styleguide/Root */ "./components/styleguide/Root.tsx");
 
 
 var _jsxFileName = "/Users/creed/dev/hello-next-js/pages/_app.tsx";
@@ -57171,14 +57236,15 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
 
+
 var components = {
   a: function a(props) {
-    return __jsx(_components_styleguide_Link__WEBPACK_IMPORTED_MODULE_10__["Link"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+    return __jsx(_components_styleguide_Link__WEBPACK_IMPORTED_MODULE_9__["Link"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
       underline: true
     }, props, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15
+        lineNumber: 16
       },
       __self: this
     }));
@@ -57187,7 +57253,7 @@ var components = {
     return __jsx(_components_styleguide_Heading__WEBPACK_IMPORTED_MODULE_8__["Heading"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, props, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 16
+        lineNumber: 17
       },
       __self: this
     }));
@@ -57198,7 +57264,7 @@ var components = {
     }, props, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 17
+        lineNumber: 18
       },
       __self: this
     }));
@@ -57209,7 +57275,7 @@ var components = {
     }, props, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 18
+        lineNumber: 19
       },
       __self: this
     }));
@@ -57220,7 +57286,18 @@ var components = {
     }, props, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 19
+        lineNumber: 20
+      },
+      __self: this
+    }));
+  },
+  ol: function ol(props) {
+    return __jsx(_components_styleguide_List__WEBPACK_IMPORTED_MODULE_10__["List"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+      as: "ol"
+    }, props, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21
       },
       __self: this
     }));
@@ -57229,7 +57306,7 @@ var components = {
     return __jsx(_components_styleguide_Body__WEBPACK_IMPORTED_MODULE_6__["Body"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, props, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 20
+        lineNumber: 22
       },
       __self: this
     }));
@@ -57238,7 +57315,16 @@ var components = {
     return __jsx("div", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, props, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 21
+        lineNumber: 23
+      },
+      __self: this
+    }));
+  },
+  ul: function ul(props) {
+    return __jsx(_components_styleguide_List__WEBPACK_IMPORTED_MODULE_10__["List"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, props, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 24
       },
       __self: this
     }));
@@ -57255,7 +57341,7 @@ var components = {
     }, rest, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 30
+        lineNumber: 33
       },
       __self: this
     }), children);
@@ -57268,20 +57354,20 @@ var components = {
     components: components,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 42
     },
     __self: this
-  }, __jsx(_components_styleguide_Root__WEBPACK_IMPORTED_MODULE_9__["Root"], {
+  }, __jsx(_components_styleguide_Root__WEBPACK_IMPORTED_MODULE_11__["Root"], {
     title: "Hello, Next.js!",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 43
     },
     __self: this
   }, __jsx(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, pageProps, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 44
     },
     __self: this
   }))));

@@ -5,7 +5,7 @@ import { ComponentDoc } from 'react-docgen-typescript'
 import { Code } from '../Code'
 import { Empty } from '../Empty'
 
-export interface MethodsTable extends React.HTMLAttributes<HTMLTableElement> {
+export interface MethodsTable extends React.HTMLAttributes<HTMLDivElement> {
   component?: React.ComponentType<any> & {
     __docgenInfo?: ComponentDoc
   }
@@ -30,23 +30,25 @@ export const MethodsTable: React.FC<MethodsTable> = ({
   } = component
 
   return (
-    <table className={clsx('collapse w-100', className)} {...rest}>
-      <thead className="bg-near-white tl v-top">
-        <tr>
-          <th className="pa2">Name</th>
-        </tr>
-      </thead>
-      <tbody>
-        {methods.map(({ name }) => {
-          return (
-            <tr className="bb b--silver v-top" key={name}>
-              <td className="pa2">
-                <Code>{name}</Code>
-              </td>
-            </tr>
-          )
-        })}
-      </tbody>
-    </table>
+    <div className={clsx('overflow-scroll w-100', className)} {...rest}>
+      <table className="collapse w-100">
+        <thead className="bg-near-white tl v-top">
+          <tr>
+            <th className="pa2">Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          {methods.map(({ name }) => {
+            return (
+              <tr className="bb b--silver v-top" key={name}>
+                <td className="pa2">
+                  <Code>{name}</Code>
+                </td>
+              </tr>
+            )
+          })}
+        </tbody>
+      </table>
+    </div>
   )
 }
