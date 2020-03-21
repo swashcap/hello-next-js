@@ -315,7 +315,7 @@ var CodeBlock = function CodeBlock(_ref) {
 
   if (live) {
     return __jsx("div", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-      className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])('ba b--silver', cls)
+      className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])('ba b--light-gray', cls)
     }, rest, {
       __source: {
         fileName: _jsxFileName,
@@ -370,7 +370,7 @@ var CodeBlock = function CodeBlock(_ref) {
     }))));
   } else if (preview) {
     return __jsx("div", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-      className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])('ba b--silver', cls)
+      className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])('ba b--light-gray', cls)
     }, rest, {
       __source: {
         fileName: _jsxFileName,
@@ -380,10 +380,9 @@ var CodeBlock = function CodeBlock(_ref) {
     }), __jsx(react_live__WEBPACK_IMPORTED_MODULE_6__["LiveProvider"], {
       code: code,
       language: language,
-      noInline: true,
-      scope: {
+      scope: _objectSpread({}, scope, {
         mdx: _mdx_js_react__WEBPACK_IMPORTED_MODULE_7__["mdx"]
-      },
+      }),
       theme: _prismTheme__WEBPACK_IMPORTED_MODULE_8__["prismTheme"],
       __source: {
         fileName: _jsxFileName,
@@ -391,9 +390,17 @@ var CodeBlock = function CodeBlock(_ref) {
       },
       __self: this
     }, __jsx(react_live__WEBPACK_IMPORTED_MODULE_6__["LivePreview"], {
+      className: "pa3 pa4-ns",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 78
+      },
+      __self: this
+    }), __jsx(react_live__WEBPACK_IMPORTED_MODULE_6__["LiveError"], {
+      className: "dark-red mv0 nt4 pa3",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 79
       },
       __self: this
     })));
@@ -406,7 +413,7 @@ var CodeBlock = function CodeBlock(_ref) {
   }, rest, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 86
     },
     __self: this
   }), function (_ref2) {
@@ -420,7 +427,7 @@ var CodeBlock = function CodeBlock(_ref) {
       style: style,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 93
+        lineNumber: 94
       },
       __self: this
     }, tokens.map(function (line, i) {
@@ -430,7 +437,7 @@ var CodeBlock = function CodeBlock(_ref) {
       }), {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 98
+          lineNumber: 99
         },
         __self: this
       }), line.map(function (token, key) {
@@ -440,7 +447,7 @@ var CodeBlock = function CodeBlock(_ref) {
         }), {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 100
+            lineNumber: 101
           },
           __self: this
         }));
@@ -1175,8 +1182,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement;
 
 
 
-var assetPrefix = ("/sup/" || false).replace(/.*\/$/, '');
-debugger;
+var assetPrefix = ( false || '').replace(/\/$/, '');
 var Root = function Root(_ref) {
   var className = _ref.className,
       children = _ref.children,
@@ -1195,7 +1201,7 @@ var Root = function Root(_ref) {
   }, rest, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 33
     },
     __self: this
   }), __jsx(_library_VisuallyHidden__WEBPACK_IMPORTED_MODULE_13__["VisuallyHidden"], {
@@ -1204,13 +1210,13 @@ var Root = function Root(_ref) {
     href: "#content",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 38
     },
     __self: this
   }, "Skip to content"), __jsx(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 41
     },
     __self: this
   }, __jsx("link", {
@@ -1218,13 +1224,13 @@ var Root = function Root(_ref) {
     href: "".concat(assetPrefix, "/favicon.ico"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 42
     },
     __self: this
   }), __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 43
     },
     __self: this
   }, title), !!description && __jsx("meta", {
@@ -1232,7 +1238,7 @@ var Root = function Root(_ref) {
     content: description,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 44
     },
     __self: this
   })), __jsx("header", {
@@ -1240,21 +1246,21 @@ var Root = function Root(_ref) {
     role: "banner",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 46
     },
     __self: this
   }, __jsx(_Grid__WEBPACK_IMPORTED_MODULE_14__["Grid"], {
     className: "flex-wrap items-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 47
     },
     __self: this
   }, __jsx(_Grid__WEBPACK_IMPORTED_MODULE_14__["Grid"].Column, {
     className: "w-100 w-70-l",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 48
     },
     __self: this
   }, __jsx(_Link__WEBPACK_IMPORTED_MODULE_9__["Link"], {
@@ -1262,7 +1268,7 @@ var Root = function Root(_ref) {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 49
     },
     __self: this
   }, "Hello, Next.js!"), __jsx(_Nav__WEBPACK_IMPORTED_MODULE_10__["Nav"], {
@@ -1274,14 +1280,14 @@ var Root = function Root(_ref) {
     }],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 52
     },
     __self: this
   })), __jsx(_Grid__WEBPACK_IMPORTED_MODULE_14__["Grid"].Column, {
     className: "w-100 w-30-l",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 63
     },
     __self: this
   }, __jsx(_SearchForm__WEBPACK_IMPORTED_MODULE_11__["SearchForm"], {
@@ -1290,7 +1296,7 @@ var Root = function Root(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 64
     },
     __self: this
   })))), __jsx("main", {
@@ -1299,7 +1305,7 @@ var Root = function Root(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 72
     },
     __self: this
   }, pathname.includes('components') ? __jsx(_layouts_SidebarLayout__WEBPACK_IMPORTED_MODULE_12__["SidebarLayout"], {
@@ -1311,14 +1317,14 @@ var Root = function Root(_ref) {
       }],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 81
+        lineNumber: 77
       },
       __self: this
     }), __jsx(_Divider__WEBPACK_IMPORTED_MODULE_6__["Divider"], {
       className: "mv2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 90
+        lineNumber: 86
       },
       __self: this
     }), __jsx(_Nav__WEBPACK_IMPORTED_MODULE_10__["Nav"], {
@@ -1338,14 +1344,14 @@ var Root = function Root(_ref) {
       }],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 91
+        lineNumber: 87
       },
       __self: this
     }), __jsx(_Divider__WEBPACK_IMPORTED_MODULE_6__["Divider"], {
       className: "mv2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 112
+        lineNumber: 108
       },
       __self: this
     }), __jsx(_Nav__WEBPACK_IMPORTED_MODULE_10__["Nav"], {
@@ -1356,13 +1362,13 @@ var Root = function Root(_ref) {
       }],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 113
+        lineNumber: 109
       },
       __self: this
     })),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 74
     },
     __self: this
   }, __jsx("article", {
@@ -1370,20 +1376,20 @@ var Root = function Root(_ref) {
     id: "content",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 125
+      lineNumber: 121
     },
     __self: this
   }, children)) : __jsx(_layouts_FullPageLayout__WEBPACK_IMPORTED_MODULE_8__["FullPageLayout"], {
     id: "content",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130
+      lineNumber: 126
     },
     __self: this
   }, children)), __jsx(_Footer__WEBPACK_IMPORTED_MODULE_7__["Footer"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133
+      lineNumber: 129
     },
     __self: this
   }));
@@ -15298,7 +15304,7 @@ exports.locals = {
 
 exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, ".Heading_Heading__15zQX:hover .Heading_HeadingAnchor__Dxt03 {\n  display: inline;\n  display: initial;\n}\n\n.Heading_HeadingAnchor__Dxt03 {\n  bottom: .25rem;\n  display: none;\n  left: -2rem;\n  width: 2rem;\n}\n\nh3 .Heading_HeadingAnchor__Dxt03 {\n  bottom: 0\n}\n\nh4 .Heading_HeadingAnchor__Dxt03 {\n  bottom: -.25rem;\n}", "",{"version":3,"sources":["/Users/creed/dev/hello-next-js/components/styleguide/Heading.module.css"],"names":[],"mappings":"AAAA;EACE,eAAgB;EAAhB,gBAAgB;AAClB;;AAEA;EACE,cAAc;EACd,aAAa;EACb,WAAW;EACX,WAAW;AACb;;AAEA;EACE;AACF;;AAEA;EACE,eAAe;AACjB","file":"Heading.module.css","sourcesContent":[".Heading:hover .HeadingAnchor {\n  display: initial;\n}\n\n.HeadingAnchor {\n  bottom: .25rem;\n  display: none;\n  left: -2rem;\n  width: 2rem;\n}\n\nh3 .HeadingAnchor {\n  bottom: 0\n}\n\nh4 .HeadingAnchor {\n  bottom: -.25rem;\n}"]}]);
+exports.push([module.i, ".Heading_Heading__15zQX:hover .Heading_HeadingAnchor__Dxt03 {\n  display: inline;\n  display: initial;\n}\n\n.Heading_HeadingAnchor__Dxt03 {\n  bottom: .25rem;\n  display: none;\n  left: -1.5rem;\n  width: 1.5rem;\n}\n\nh3 .Heading_HeadingAnchor__Dxt03 {\n  bottom: 0\n}\n\nh4 .Heading_HeadingAnchor__Dxt03 {\n  bottom: -.25rem;\n}", "",{"version":3,"sources":["/Users/creed/dev/hello-next-js/components/styleguide/Heading.module.css"],"names":[],"mappings":"AAAA;EACE,eAAgB;EAAhB,gBAAgB;AAClB;;AAEA;EACE,cAAc;EACd,aAAa;EACb,aAAa;EACb,aAAa;AACf;;AAEA;EACE;AACF;;AAEA;EACE,eAAe;AACjB","file":"Heading.module.css","sourcesContent":[".Heading:hover .HeadingAnchor {\n  display: initial;\n}\n\n.HeadingAnchor {\n  bottom: .25rem;\n  display: none;\n  left: -1.5rem;\n  width: 1.5rem;\n}\n\nh3 .HeadingAnchor {\n  bottom: 0\n}\n\nh4 .HeadingAnchor {\n  bottom: -.25rem;\n}"]}]);
 // Exports
 exports.locals = {
 	"Heading": "Heading_Heading__15zQX",
