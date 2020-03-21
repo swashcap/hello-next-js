@@ -15,6 +15,13 @@ import {TableOfContents} from '../../components/styleguide/component/TableOfCont
     <p>
       The breadcrumb provides awareness in deeply nested page structures or views, and permits users to move freely up the structure, promoting discovery.
     </p>
+    <CodeBlock language="tsx" preview scope={{Breadcrumb}}>
+  {`<Breadcrumb>
+  <Breadcrumb.Item href="/music">Music</Breadcrumb.Item>
+  <Breadcrumb.Item href="/music/hip-hop">Hip Hop</Breadcrumb.Item>
+  <Breadcrumb.Item active>Wu-Tang Clan</Breadcrumb.Item>
+</Breadcrumb>`}
+      </CodeBlock>
   </Grid.Column>
   <Grid.Column className="w-100 w-25-l">
     <TableOfContents
@@ -41,13 +48,20 @@ import {Breadcrumb} from 'hello-next-js'
 
 The root `Breadcrumb` is a styling wrapper for the breadcrumb's items, exposed through the `Breadcrumb.Item` component. Compose these in a React component in your project to form a breadcrumb:
 
-<CodeBlock language="tsx" live scope={{Breadcrumb}}>
-  {`<Breadcrumb>
-  <Breadcrumb.Item href="/music">Music</Breadcrumb.Item>
-  <Breadcrumb.Item href="/music/hip-hop">Hip Hop</Breadcrumb.Item>
-  <Breadcrumb.Item active>Wu-Tang Clan</Breadcrumb.Item>
-</Breadcrumb>`}
-</CodeBlock>
+```tsx
+import React from 'react'
+import {Breadcrumb} from 'hello-next-js'
+
+export const MyComponent: React.FC<any> = () => {
+  return (
+    <Breadcrumb>
+      <Breadcrumb.Item href="/music">Music</Breadcrumb.Item>
+      <Breadcrumb.Item href="/music/hip-hop">Hip Hop</Breadcrumb.Item>
+      <Breadcrumb.Item active>Wu-Tang Clan</Breadcrumb.Item>
+    </Breadcrumb>
+  )
+}
+```
 
 ## Accessibility
 

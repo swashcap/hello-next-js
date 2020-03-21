@@ -11,6 +11,13 @@ import {TableOfContents} from '../../components/styleguide/component/TableOfCont
   <Grid.Column className="w-100 w-75-l">
     <p className="f4">The Alert component informs users of change in the underlying system; user interaction or a change in application state can surface the component.</p>
     <p>Alert has three variations ensure it covers multiple interaction patterns: success, warning, and error.</p>
+    <CodeBlock language="tsx" preview scope={{Alert}}>
+      {`<>
+  <Alert className="mb3" variant="success">Success</Alert>
+  <Alert className="mb3">Warning</Alert>
+  <Alert variant="error">Error</Alert>
+</>`}
+    </CodeBlock>
   </Grid.Column>
   <Grid.Column className="w-100 w-25-l">
     <TableOfContents

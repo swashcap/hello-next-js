@@ -11,6 +11,13 @@ import {TableOfContents} from '../../components/styleguide/component/TableOfCont
   <Grid.Column className="w-100 w-75-l">
     <p className="f4">The Button is the base interactive component for hello-next-js: it affords navigation, form submission, and application state changes.</p>
     <p>Three variations of Button exist to demonstrate the level of interaction: primary, secondary, and tertiary.</p>
+    <CodeBlock language="tsx" preview scope={{Button}}>
+      {`<div className="flex flex-wrap items-center content-center">
+  <Button className="mr3">Primary</Button>
+  <Button className="mr3" variant="secondary">Secondary</Button>
+  <Button variant="tertiary">Tertiary</Button>
+</div>`}
+    </CodeBlock>
   </Grid.Column>
   <Grid.Column className="w-100 w-25-l">
     <TableOfContents

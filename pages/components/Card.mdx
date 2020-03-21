@@ -11,6 +11,12 @@ import {TableOfContents} from '../../components/styleguide/component/TableOfCont
   <Grid.Column className="w-100 w-75-l">
     <p className="f4">Isolate or draw focus to content with the Card.</p>
     <p>Card is a generic container for text and image content with elevation to separate and draw attention to itself. Group related elements within the Card.</p>
+    <CodeBlock language="tsx" preview scope={{Card}}>
+  {`<Card>
+  <h1 className="f3 lh-title mb1 mt0">Sample card</h1>
+  <p className="mv0">This is a sample card.</p>
+</Card>`}
+    </CodeBlock>
   </Grid.Column>
   <Grid.Column className="w-100 w-25-l">
     <TableOfContents
@@ -35,13 +41,19 @@ Import the `Card` component into a React component in your project
 import {Card} from 'hello-next-js'
 ```
 
-<CodeBlock language="tsx" live scope={{Card}}>
-  {`<Card>
-  <h1 className="f3 lh-title mb1 mt0">Sample card</h1>
-  <p className="mv0">This is a sample card.</p>
-</Card>`}
-</CodeBlock>
+```tsx
+import React from 'react'
+import {Card} from 'hello-next-js'
 
+export const MyComponent: React.FC<any> = () => {
+  return (
+    <Card>
+      <h1 className="f3 lh-title mb1 mt0">Sample card</h1>
+      <p className="mv0">This is a sample card.</p>
+    </Card>
+  )
+}
+```
 
 ### Elevation
 
