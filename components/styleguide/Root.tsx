@@ -14,7 +14,6 @@ import { VisuallyHidden } from '../library/VisuallyHidden'
 import { Grid } from './Grid'
 
 const assetPrefix = (process.env.assetPrefix || '').replace(/\/$/, '')
-debugger
 
 export interface RootProps extends React.HTMLAttributes<HTMLDivElement> {
   description?: string
