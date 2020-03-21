@@ -37,7 +37,7 @@ export const CodeBlock: React.FC<any> = ({
 
   if (live) {
     return (
-      <div className={clsx('ba b--silver', cls)} {...rest}>
+      <div className={clsx('ba b--light-gray', cls)} {...rest}>
         <LiveProvider
           code={code}
           language={language}
@@ -65,17 +65,18 @@ export const CodeBlock: React.FC<any> = ({
     )
   } else if (preview) {
     return (
-      <div className={clsx('ba b--silver', cls)} {...rest}>
+      <div className={clsx('ba b--light-gray', cls)} {...rest}>
         <LiveProvider
           code={code}
           language={language}
-          noInline
           scope={{
+            ...scope,
             mdx
           }}
           theme={prismTheme}
         >
-          <LivePreview />
+          <LivePreview className="pa3 pa4-ns" />
+          <LiveError className="dark-red mv0 nt4 pa3" />
         </LiveProvider>
       </div>
     )
