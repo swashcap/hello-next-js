@@ -10,6 +10,7 @@ import {
 } from 'react-live'
 import { mdx } from '@mdx-js/react'
 
+import { Icon } from '../library/Icon'
 import { prismTheme } from './prismTheme'
 
 type ComponentProps<T> = T extends React.Component<infer U> ? U : never
@@ -34,6 +35,11 @@ export const CodeBlock: React.FC<any> = ({
 }) => {
   const language = lang || (cls || '').replace(/language-/, '')
   const code = children?.trim() || ''
+  const liveScope = {
+    ...scope,
+    Icon,
+    mdx
+  }
 
   if (live) {
     return (
@@ -41,10 +47,7 @@ export const CodeBlock: React.FC<any> = ({
         <LiveProvider
           code={code}
           language={language}
-          scope={{
-            ...scope,
-            mdx
-          }}
+          scope={liveScope}
           theme={prismTheme}
         >
           <LivePreview className="pa3 pa4-ns" />
@@ -70,10 +73,7 @@ export const CodeBlock: React.FC<any> = ({
         <LiveProvider
           code={code}
           language={language}
-          scope={{
-            ...scope,
-            mdx
-          }}
+          scope={liveScope}
           theme={prismTheme}
         >
           <LivePreview className="pa3 pa4-ns" />

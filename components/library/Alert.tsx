@@ -1,6 +1,8 @@
 import React from 'react'
 import clsx from 'clsx'
 
+import { Icon } from './Icon'
+
 export type AlertVariant = 'error' | 'success' | 'warning'
 
 export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -79,7 +81,7 @@ export class Alert extends React.Component<AlertProps> {
             ref={this.buttonRef}
             type="button"
           >
-            ×
+            <Icon name="close" />
           </button>
         )}
       </div>

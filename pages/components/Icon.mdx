@@ -1,0 +1,78 @@
+import {CodeBlock} from '../../components/styleguide/CodeBlock'
+import {Grid} from '../../components/styleguide/Grid'
+import {Icon} from '../../components/library/Icon'
+import {MethodsTable} from '../../components/styleguide/component/MethodsTable'
+import {PropsTable} from '../../components/styleguide/component/PropsTable'
+import {TableOfContents} from '../../components/styleguide/component/TableOfContents'
+
+# Icon
+
+<Grid>
+  <Grid.Column className="w-100 w-75-l">
+    <p className="f4">Icon provides a visual representation of a concept.</p>
+    <p>Use the Icon to add context or replace text.</p>
+    <CodeBlock language="tsx" preview>
+      {`<div className="flex">
+      <div className="mr2">
+        <Icon name="arrowDown" />
+      </div>
+      <div className="mr2">
+        <Icon name="arrowLeft" />
+      </div>
+      <div className="mr2">
+        <Icon name="arrowRight" />
+      </div>
+      <div className="mr2">
+        <Icon name="arrowUp" />
+      </div>
+      <div className="mr2">
+        <Icon name="close" />
+      </div>
+    </div>`}
+    </CodeBlock>
+  </Grid.Column>
+  <Grid.Column className="w-100 w-25-l">
+    <TableOfContents
+      items={[
+        ['Usage'],
+        ['Component API']
+      ]}
+    />
+  </Grid.Column>
+</Grid>
+
+## Usage
+
+Import the `Icon` component into a React component in your project:
+
+```typescript
+import {Icon} from 'hello-next-js'
+```
+
+Use the `Icon` component in a component:
+
+```tsx
+import React from 'react'
+import {Icon} from 'hello-next-js'
+
+export const MyComponent: React.FC<any> = () => {
+  return (
+    <div>
+      <button className="my-button">
+        Cancel
+        <Icon name="close" />
+      </button>
+    </div>
+  )
+}
+```
+
+## Component API
+
+### Props
+
+<PropsTable component={Icon} />
+
+### Methods
+
+<MethodsTable component={Icon} />

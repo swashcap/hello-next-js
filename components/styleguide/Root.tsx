@@ -105,6 +105,10 @@ export const Root: React.FC<RootProps> = ({
                     {
                       href: `${assetPrefix}/components/Card/`,
                       name: 'Card'
+                    },
+                    {
+                      href: `${assetPrefix}/components/Icon/`,
+                      name: 'Icon'
                     }
                   ]}
                 />

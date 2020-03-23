@@ -8,6 +8,7 @@ import '../components/library/Global.css'
 import { Body } from '../components/styleguide/Body'
 import { CodeBlock } from '../components/styleguide/CodeBlock'
 import { Heading } from '../components/styleguide/Heading'
+import { Icon } from '../components/library/Icon'
 import { Link } from '../components/styleguide/Link'
 import { List } from '../components/styleguide/List'
 import { Root } from '../components/styleguide/Root'
@@ -34,7 +35,8 @@ const components = {
         {children}
       </CodeBlock>
     )
-  }
+  },
+  Icon
 }
 
 export default ({ Component, pageProps }: AppProps) => {
