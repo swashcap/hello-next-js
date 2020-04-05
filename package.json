@@ -27,7 +27,7 @@
     "@commitlint/config-conventional": "^8.3.4",
     "@mdx-js/loader": "^1.5.7",
     "@next/mdx": "^9.3.1",
-    "@types/node": "^13.9.2",
+    "@types/node": "^13.11.0",
     "@types/react": "^16.9.25",
     "husky": "^4.2.3",
     "lint-staged": "^10.1.1",
