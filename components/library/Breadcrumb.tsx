@@ -24,7 +24,7 @@ export class Breadcrumb extends React.Component<BreadcrumbProps> {
   }) => {
     const props = {
       className: clsx('dib', active && 'fw7 pv1', className),
-      ...rest
+      ...rest,
     }
 
     if (active) {

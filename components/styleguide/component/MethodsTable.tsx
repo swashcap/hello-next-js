@@ -26,7 +26,7 @@ export const MethodsTable: React.FC<MethodsTable> = ({
   }
 
   const {
-    __docgenInfo: { methods }
+    __docgenInfo: { methods },
   } = component
 
   return (

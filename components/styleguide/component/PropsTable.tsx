@@ -29,7 +29,7 @@ export const PropsTable: React.FC<PropsTableProps> = ({
   }
 
   const {
-    __docgenInfo: { props }
+    __docgenInfo: { props },
   } = component
 
   return (
@@ -45,7 +45,7 @@ export const PropsTable: React.FC<PropsTableProps> = ({
           </tr>
         </thead>
         <tbody>
-          {Object.keys(props).map(key => {
+          {Object.keys(props).map((key) => {
             const { defaultValue, description, name, required, type } = props[
               key
             ]

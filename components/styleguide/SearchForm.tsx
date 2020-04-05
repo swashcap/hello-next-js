@@ -13,7 +13,7 @@ export const SearchForm: React.FC<SearchFormProps> = ({
       className="bb bl br-0 bt b--silver black db input-reset lh-copy ph2 pv1 sans-serif w-100"
       placeholder="Component name…"
       style={{
-        flex: 2
+        flex: 2,
       }}
     />
     <button

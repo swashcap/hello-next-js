@@ -58,14 +58,14 @@ export const Root: React.FC<RootProps> = ({
               links={[
                 {
                   href: `${assetPrefix}/components/`,
-                  name: 'Components'
-                }
+                  name: 'Components',
+                },
               ]}
             />
           </Grid.Column>
           <Grid.Column className="w-100 w-30-l">
             <SearchForm
-              onSubmit={event => {
+              onSubmit={(event) => {
                 event.preventDefault()
               }}
             />
@@ -82,8 +82,8 @@ export const Root: React.FC<RootProps> = ({
                   links={[
                     {
                       href: `${assetPrefix}/components/`,
-                      name: 'Getting Started'
-                    }
+                      name: 'Getting Started',
+                    },
                   ]}
                 />
                 <Divider className="mv2" />
@@ -92,24 +92,24 @@ export const Root: React.FC<RootProps> = ({
                   links={[
                     {
                       href: `${assetPrefix}/components/Alert/`,
-                      name: 'Alert'
+                      name: 'Alert',
                     },
                     {
                       href: `${assetPrefix}/components/Breadcrumb/`,
-                      name: 'Breadcrumb'
+                      name: 'Breadcrumb',
                     },
                     {
                       href: `${assetPrefix}/components/Button/`,
-                      name: 'Button'
+                      name: 'Button',
                     },
                     {
                       href: `${assetPrefix}/components/Card/`,
-                      name: 'Card'
+                      name: 'Card',
                     },
                     {
                       href: `${assetPrefix}/components/Icon/`,
-                      name: 'Icon'
-                    }
+                      name: 'Icon',
+                    },
                   ]}
                 />
                 <Divider className="mv2" />
@@ -118,8 +118,8 @@ export const Root: React.FC<RootProps> = ({
                   links={[
                     {
                       href: `${assetPrefix}/components/utilities/`,
-                      name: 'Utilities'
-                    }
+                      name: 'Utilities',
+                    },
                   ]}
                 />
               </>

@@ -23,7 +23,7 @@ export const Link: React.FC<LinkProps> = ({
       href === pathname && 'dark-red',
       className
     ),
-    ...rest
+    ...rest,
   }
 
   return (

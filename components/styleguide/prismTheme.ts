@@ -4,6 +4,6 @@ export const prismTheme = {
   ...github,
   plain: {
     color: '#333',
-    backgroundColor: '#f4f4f4'
-  }
+    backgroundColor: '#f4f4f4',
+  },
 }

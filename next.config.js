@@ -8,7 +8,7 @@ const assetPrefix =
  * {@link https://github.com/zeit/next.js/tree/canary/packages/next-mdx}
  */
 const withMDX = require('@next/mdx')({
-  extension: /\.(md|mdx)$/
+  extension: /\.(md|mdx)$/,
 })
 
 module.exports = withMDX({
@@ -23,7 +23,7 @@ module.exports = withMDX({
    * {@link https://nextjs.org/docs/api-reference/next.config.js/environment-variables}
    */
   env: {
-    assetPrefix
+    assetPrefix,
   },
 
   /**
@@ -36,9 +36,9 @@ module.exports = withMDX({
   /**
    * {@link https://nextjs.org/docs/api-reference/next.config.js/custom-webpack-config}
    */
-  webpack: config => {
+  webpack: (config) => {
     const rule = config.module.rules.find(
-      rule => rule.test && rule.test.test('filename.tsx')
+      (rule) => rule.test && rule.test.test('filename.tsx')
     )
 
     rule.use = [
@@ -46,18 +46,18 @@ module.exports = withMDX({
       {
         loader: 'react-docgen-typescript-loader',
         options: {
-          propFilter: prop => {
+          propFilter: (prop) => {
             if (prop.parent) {
               return !prop.parent.fileName.includes('node_modules')
             }
 
             return true
           },
-          tsconfigPath: path.resolve(__dirname, './tsconfig.json')
-        }
-      }
+          tsconfigPath: path.resolve(__dirname, './tsconfig.json'),
+        },
+      },
     ]
 
     return config
-  }
+  },
 })

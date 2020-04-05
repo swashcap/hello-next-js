@@ -6,7 +6,7 @@ import {
   LiveEditor,
   LiveError,
   LivePreview,
-  LiveProviderProps
+  LiveProviderProps,
 } from 'react-live'
 import { mdx } from '@mdx-js/react'
 
@@ -38,7 +38,7 @@ export const CodeBlock: React.FC<any> = ({
   const liveScope = {
     ...scope,
     Icon,
-    mdx
+    mdx,
   }
 
   if (live) {
@@ -60,7 +60,7 @@ export const CodeBlock: React.FC<any> = ({
                 fontSize: '14px',
                 lineHeight: 1.25,
                 padding: 0,
-                whiteSpace: 'pre-wrap'
+                whiteSpace: 'pre-wrap',
               }}
             />
           </div>
@@ -96,7 +96,7 @@ export const CodeBlock: React.FC<any> = ({
           className={clsx('code f6 lh-title pa3', className, cls)}
           style={{
             ...style,
-            whiteSpace: 'pre-wrap'
+            whiteSpace: 'pre-wrap',
           }}
         >
           {tokens.map((line, i) => (

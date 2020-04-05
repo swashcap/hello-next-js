@@ -14,15 +14,15 @@ import { List } from '../components/styleguide/List'
 import { Root } from '../components/styleguide/Root'
 
 const components = {
-  a: props => <Link underline {...props} />,
-  h1: props => <Heading {...props} />,
-  h2: props => <Heading variant="2" {...props} />,
-  h3: props => <Heading variant="3" {...props} />,
-  h4: props => <Heading variant="4" {...props} />,
-  ol: props => <List as="ol" {...props} />,
-  p: props => <Body {...props} />,
-  pre: props => <div {...props} />,
-  ul: props => <List {...props} />,
+  a: (props) => <Link underline {...props} />,
+  h1: (props) => <Heading {...props} />,
+  h2: (props) => <Heading variant="2" {...props} />,
+  h3: (props) => <Heading variant="3" {...props} />,
+  h4: (props) => <Heading variant="4" {...props} />,
+  ol: (props) => <List as="ol" {...props} />,
+  p: (props) => <Body {...props} />,
+  pre: (props) => <div {...props} />,
+  ul: (props) => <List {...props} />,
   code: ({
     children,
     className,
@@ -36,7 +36,7 @@ const components = {
       </CodeBlock>
     )
   },
-  Icon
+  Icon,
 }
 
 export default ({ Component, pageProps }: AppProps) => {
